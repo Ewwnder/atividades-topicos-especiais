@@ -4,7 +4,8 @@ export const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#0343f3'
+        color: '#0343f3',
+        textAlign: 'center',
     },
     imageSize: {
         width:300,

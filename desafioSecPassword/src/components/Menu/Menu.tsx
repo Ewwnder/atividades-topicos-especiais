@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 
-import { styles } from "./MenuStyles"
+import { styles } from "./MenuStyles";
 
 export function Menu(){
     return(
