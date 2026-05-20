@@ -9,19 +9,48 @@ type HomeScreenProps = {
 }
 
 export function HomeScreen({navigation}: HomeScreenProps){
-    const [ inputValue, setInputValue ] = useState('')
+    
+    const [username, setUsername] = useState('')
+    const [idade, setIdade] = useState('')
+    const [email, setEmail] = useState('')
+    const [cidade, setCidade] = useState('')
 
     const navToUserScreen = () => {
-        navigation.navigate('User', { username: inputValue })
+        navigation.navigate('User', { 
+            username,
+            idade,
+            email,
+            cidade
+        })
     }
 
     return(
         <View>
             <TextInput
                 placeholder='Digite seu nome aqui...'
-                value={inputValue}
-                onChangeText={(text) => setInputValue(text)}
+                value={username}
+                onChangeText={setUsername}
             />
+
+            <TextInput
+                placeholder='Digite sua idade aqui...'
+                value={idade}
+                onChangeText={setIdade}
+                keyboardType='numeric'
+            />
+
+            <TextInput
+                placeholder='Digite seu email aqui...'
+                value={email}
+                onChangeText={setEmail}
+            />
+
+            <TextInput
+                placeholder='Digite sua cidade aqui...'
+                value={cidade}
+                onChangeText={setCidade}
+            />
+
             <Button title='cadastrar' onPress={navToUserScreen}/>
         </View>
     )

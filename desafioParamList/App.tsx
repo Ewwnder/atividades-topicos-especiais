@@ -5,7 +5,12 @@ import { UserScreen } from './src/screens/UserScreen/UserScreen';
 
 export type StackParamList = {
   Home: undefined
-  User: { username: string }
+  User: { 
+    username: string
+    idade: string
+    email: string
+    cidade: string
+  }
 }
 
 import { NavigationContainer } from '@react-navigation/native';
